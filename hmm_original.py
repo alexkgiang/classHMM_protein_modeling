@@ -26,6 +26,7 @@ class HMM:
         self.transition_prob /= self.transition_prob.sum(axis=1, keepdims=True)
         self.emission_prob /= self.emission_prob.sum(axis=1, keepdims=True)
 
+    # This the viterbi algorithm
     def predict(self, sequence):
         T = len(sequence)
         delta = np.zeros((self.num_states, T))
