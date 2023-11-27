@@ -1,0 +1,45 @@
+MKMASSLAFLLLNFHVSLFLVQLLTPCSAQFSVLGPSGPILAMVGEDADLPCHLFPTMSAETMELRWVSSSLRQVVNVYADGKEVEDRQSAPYRGRTSILRDGITAGKAALRIHNVTASDSGKYLCYFQDGDFYEKALVELKVAALGSDLHIEVKGYEDGGIHLECRSTGWYPQPQIKWSDTKGENIPAVEAPVVADGVGLYAVAASVIMRGSSGGGVSCIIRNSLLGLEKTASISIADPFFRSAQPWIAALAGTLPISLLLLAGASYFLWRQQKEKIALSRETEREREMKEMGYAATEQEISLREKLQEELKWRKIQYMARGEKSLAYHEWKMALFKPADVILDPDTANAILLVSEDQRSVQRAEEPRDLPDNPERFEWRYCVLGCENFTSGRHYWEVEVGDRKEWHIGVCSKNVERKKGWVKMTPENGYWTMGLTDGNKYRALTEPRTNLKLPEPPRKVGIFLDYETGEISFYNATDGSHIYTFPHASFSEPLYPVFRILTLEPTALTICPIPKEVESSPDPDLVPDHSLETPLTPGLANESGEPQAEVTSLLLPAHPGAEVSPSATTNQNHKLQARTEALY
+  Beta strand		32-34	Combined Sources	
+	Beta strand		40-43	Combined Sources	
+	Beta strand		48-56	Combined Sources	
+	Beta strand		63-69	Combined Sources	
+	Turn		70-73	Combined Sources	
+	Beta strand		74-80	Combined Sources	
+	Helix		91-93	Combined Sources	
+	Beta strand		96-100	Combined Sources	
+	Helix		104-106	Combined Sources	
+	Beta strand		108-115	Combined Sources	
+	Helix		118-120	Combined Sources	
+	Beta strand		122-130	Combined Sources	
+	Beta strand		133-145	Combined Sources	
+	Beta strand		151-158	Combined Sources	
+	Beta strand		161-173	Combined Sources	
+	Beta strand		176-181	Combined Sources	
+	Beta strand		202-210	Combined Sources	
+	Beta strand		218-224	Combined Sources	
+	Turn		225-228	Combined Sources	
+	Beta strand		229-235	Combined Sources	
+	Turn		239-241	Combined Sources	
+	Helix		328-336	Combined Sources	
+	Beta strand		337-339	Combined Sources	
+	Turn		346-348	Combined Sources	
+	Beta strand		353-355	Combined Sources	
+	Beta strand		359-364	Combined Sources	
+	Beta strand		379-381	Combined Sources	
+	Beta strand		383-387	Combined Sources	
+	Beta strand		390-400	Combined Sources	
+	Beta strand		407-413	Combined Sources	
+	Beta strand		418-421	Combined Sources	
+	Helix		427-429	Combined Sources	
+	Beta strand		431-437	Combined Sources	
+	Turn		438-440	Combined Sources	
+	Beta strand		441-444	Combined Sources	
+	Beta strand		446-448	Combined Sources	
+	Beta strand		450-452	Combined Sources	
+	Beta strand		459-466	Combined Sources	
+	Turn		467-470	Combined Sources	
+	Beta strand		471-476	Combined Sources	
+	Turn		477-479	Combined Sources	
+	Beta strand		482-485	Combined Sources	
+	Beta strand		495-500	Combined Sources	
+	Beta strand		509-511

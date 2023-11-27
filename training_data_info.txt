@@ -10,6 +10,8 @@ Sequence 7: Galectin-8: https://www.uniprot.org/uniprotkb/O00214/entry
 Sequence 8: Tumor necrosis factor receptor superfamily member 11B: https://www.uniprot.org/uniprotkb/O00300/entry
 Sequence 9: Pyruvate dehydrogenase protein X component, mitochondrial: https://www.uniprot.org/uniprotkb/O00330/entry
 Sequence 10: Forkhead box protein N3: https://www.uniprot.org/uniprotkb/O00409/entry
+Sequence 11: Histone deacetylase complex subunit SAP18: https://www.uniprot.org/uniprotkb/O00422/entry
+Sequence 12: Butyrophilin subfamily 3 member A3: https://www.uniprot.org/uniprotkb/O00478/entry
 
 
 
