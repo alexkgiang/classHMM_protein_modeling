@@ -1,4 +1,7 @@
 Sequences used for training data: 
 
 Sequence 1: Cyclin-dependent kinase 2, Homo sapiens: https://www.uniprot.org/uniprotkb/P24941/entry#sequences
-Sequence 2: CDK2 isoform 1: 
+Sequence 2: Rho GTPase-activating protein 10, Homo sapiens: https://www.uniprot.org/uniprotkb/A1A4S6/entry#structure
+Sequence 3: Elongation of very long chain fatty acids protein 7, Homo sapiens: https://www.uniprot.org/uniprotkb/A1L3X0/entry
+Sequence 4: tRNA wybutosine-synthesizing protein 5, Homo sapiens: https://www.uniprot.org/uniprotkb/A2RUC4/entry#sequences
+Sequence 5: Probable crossover junction endonuclease EME2: https://www.uniprot.org/uniprotkb/A4GXA9/entry
