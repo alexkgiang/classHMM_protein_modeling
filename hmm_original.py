@@ -164,7 +164,8 @@ class HMM:
         for i, label in enumerate(labels):
             for j in range(1, len(label)):
                 self.transition_prob[label[j - 1], label[j]] += 1
-                self.emission_prob[label[j], sequences[i][j]] += 1
+                sequence_index = sequences[i][j] - 1
+                self.emission_prob[label[j], sequence_index] += 1
 
         # Normalize the probabilities
         self.transition_prob /= self.transition_prob.sum(axis=1, keepdims=True)
@@ -177,7 +178,8 @@ class HMM:
         psi = np.zeros((self.num_states, T), dtype=int)
 
         # Initialization
-        delta[:, 0] = self.initial_prob * self.emission_prob[:, sequence[0]]
+        sequence_index = sequence[0] - 1
+        delta[:, 0] = self.initial_prob * self.emission_prob[:, sequence_index]
 
         # Recursion
         for t in range(1, T):
@@ -185,7 +187,8 @@ class HMM:
                 trans_prob = delta[:, t - 1] * self.transition_prob[:, j]
                 delta[j, t] = np.max(trans_prob)
                 psi[j, t] = np.argmax(trans_prob)
-            delta[:, t] *= self.emission_prob[:, sequence[t]]
+            sequence_index = sequence[t] - 1  # Adjust to 0-based index
+            delta[:, t] *= self.emission_prob[:, sequence_index]
 
         # Termination
         best_path_prob = np.max(delta[:, -1])
@@ -199,27 +202,70 @@ class HMM:
 
         return best_path, best_path_prob
 
-# Example usage
-sequences = [
-    [0, 1, 2, 3, 4],  # Protein sequence 1
-    [3, 2, 1, 0, 3],  # Protein sequence 2
-]
+# EXAMPLE FORMATTING for protein sequences and labels
+# sequences = [
+#     [0, 1, 2, 3, 4],  Protein sequence 1
+#     [3, 2, 1, 0, 3],  Protein sequence 2
+# ]
 
-# reason for many labels: one part of the protein might form an alpha helix, but another may form a beta-sheet.
-labels = [
-    [0, 1, 0],  # Labels for sequence 1
-    [1, 2, 0],  # Labels for sequence 2
-]
+# labels = [
+#     [0, 1, 0, 1, 2],  Labels for sequence 1
+#     [1, 2, 0, 2, 1],  Labels for sequence 2
+# ]
 
-# Create and train the HMM
-num_states = 3  # Number of states (alpha, beta, coil)
+amino_acid_to_number = {
+    'A': 1, 'R': 2, 'N': 3, 'D': 4, 'C': 5,
+    'Q': 6, 'E': 7, 'G': 8, 'H': 9, 'I': 10,
+    'L': 11, 'K': 12, 'M': 13, 'F': 14, 'P': 15,
+    'S': 16, 'T': 17, 'W': 18, 'Y': 19, 'V': 20
+}
+
+def convert_sequence_to_numbers(sequence):
+    return [amino_acid_to_number[acid] for acid in sequence]
+
+def process_file(filename):
+    sequences = []
+    labels = []
+
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+
+        for i in range(0, len(lines), 2):
+            protein_sequence = lines[i].strip()
+            label_sequence = lines[i + 1].strip()
+
+            num_sequence = convert_sequence_to_numbers(protein_sequence)
+            num_labels = [int(label) for label in label_sequence]
+
+            sequences.append(num_sequence)
+            labels.append(num_labels)
+
+    return sequences, labels
+
+sequences, labels = process_file('training_data.txt')
+
+num_states = 4 # Number of states (alpha, beta, coil)
 num_symbols = 20  # Number of symbols (amino acids)
 hmm = HMM(num_states, num_symbols)
 hmm.train(sequences, labels)
 # hmm.CHMM_train(sequences, labels, 0.001, 10)
 
-# Test with a new sequence
-test_sequence = [0, 1, 2, 3, 4]  # An unlabeled sequence
-predicted_label, best_path_prob = hmm.predict(test_sequence)
+def process_new_sequence(filename):
+    test_sequence = []
+
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+
+        protein_sequence = lines[0].strip()
+
+        num_sequence = convert_sequence_to_numbers(protein_sequence)
+
+        test_sequence.append(num_sequence)
+
+    return test_sequence
+
+test_sequence = process_new_sequence('test_sequence.txt')
+# Test with a new sequence, unlabeled
+predicted_label, best_path_prob = hmm.predict(test_sequence[0])
 print("Predicted Label:", predicted_label)
 print("Best Path Probability:", best_path_prob) #how confident the model is
