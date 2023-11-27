@@ -30,6 +30,27 @@ class HMM:
         # Termination: sum of the last column
         return np.sum(alpha[:, -1])
     
+    def backward_algorithm(self, sequence):
+        """
+        Compute the backward probabilities for an HMM given an observation sequence.
+        :param sequence: The observation sequence
+        :return: A matrix of backward probabilities
+        """
+        T = len(sequence)
+        beta = np.zeros((self.num_states, T))
+
+        # Initialization
+        beta[:, -1] = 1
+
+        # Iteration
+        for t in range(T - 2, -1, -1):
+            for i in range(self.num_states):
+                for j in range(self.num_states):
+                    beta[i, t] += self.transition_prob[i, j] * self.emission_prob[j, sequence[t + 1]] * beta[j, t + 1]
+
+        return beta
+
+    
     
     def forward_algorithm_with_labels(self, sequence, labels):
         """
@@ -72,51 +93,47 @@ class HMM:
 
 
     def compute_gradients(self, sequences, labels):
-        # Gradient computation logic here
-        # It will involve calculating the frequency of transitions and emissions
-        # in the observed sequences and comparing them with the expected frequencies
-        # based on the current model parameters
-        gradients = np.zeros_like(self.transition_prob)  # Initialize gradients for transition probabilities
-        emission_gradients = np.zeros_like(self.emission_prob)  # Initialize gradients for emission probabilities
+        # Initialize gradients
+        transition_gradients = np.zeros_like(self.transition_prob)
+        emission_gradients = np.zeros_like(self.emission_prob)
 
-        for sequence in sequences:
-            # Initialize counts for each sequence
-            transition_counts = np.zeros_like(self.transition_prob)
-            emission_counts = np.zeros_like(self.emission_prob)
+        # Iterate over each sequence and its corresponding label sequence
+        for sequence, label_sequence in zip(sequences, labels):
+            # Compute probabilities and expected counts for this sequence
+            alpha = self.forward_algorithm(sequence)
+            beta = self.backward_algorithm(sequence)  # Assuming backward algorithm is implemented
 
-            # Calculate n_k(pi, s) for each sequence
             for t in range(1, len(sequence)):
-                for prev_state in range(self.num_states):
-                    for curr_state in range(self.num_states):
-                        transition_counts[prev_state, curr_state] += 1  # Example count increment for transition
-                        emission_counts[curr_state, sequence[t]] += 1  # Example count increment for emission
+                actual_transition = (label_sequence[t - 1], label_sequence[t])
+                actual_emission = (label_sequence[t], sequence[t])
 
-            # Compute expected usage n_k(s) and gradients
-            for k in range(self.num_states):
-                for l in range(self.num_states):
-                    gradients[k, l] -= transition_counts[k, l] / self.transition_prob[k, l]
-                for symbol in range(self.num_symbols):
-                    emission_gradients[k, symbol] -= emission_counts[k, symbol] / self.emission_prob[k, symbol]
+                # Update transition gradients
+                for i in range(self.num_states):
+                    for j in range(self.num_states):
+                        expected_count = alpha[t - 1, i] * self.transition_prob[i, j] * beta[t, j]
+                        transition_gradients[i, j] -= (i == actual_transition[0] and j == actual_transition[1]) - expected_count / self.transition_prob[i, j]
 
-        # Average gradients over all sequences
-        gradients /= len(sequences)
-        emission_gradients /= len(sequences)
+                # Update emission gradients
+                for state in range(self.num_states):
+                    for symbol in range(self.num_symbols):
+                        expected_count = alpha[t, state] * beta[t, state]
+                        emission_gradients[state, symbol] -= (state == actual_emission[0] and symbol == actual_emission[1]) - expected_count / self.emission_prob[state, symbol]
 
-        return gradients, emission_gradients
+        return transition_gradients, emission_gradients
 
 
-    def update_parameters(self, gradients, emission_gradients, learning_rate):
+
+    def update_parameters(self, transition_gradients, emission_gradients, learning_rate):
         # Update transition probabilities
-        self.transition_prob -= learning_rate * gradients
-        # Ensure transition probabilities are still valid
-        self.transition_prob = np.clip(self.transition_prob, 1e-6, np.inf)  # Avoid division by zero or negative probabilities
+        self.transition_prob -= learning_rate * transition_gradients
+        self.transition_prob = np.clip(self.transition_prob, 1e-6, np.inf)
         self.transition_prob /= np.sum(self.transition_prob, axis=1, keepdims=True)
 
         # Update emission probabilities
         self.emission_prob -= learning_rate * emission_gradients
-        # Ensure emission probabilities are still valid
-        self.emission_prob = np.clip(self.emission_prob, 1e-6, np.inf)  # Avoid division by zero or negative probabilities
+        self.emission_prob = np.clip(self.emission_prob, 1e-6, np.inf)
         self.emission_prob /= np.sum(self.emission_prob, axis=1, keepdims=True)
+
 
     def CHMM_train(self, sequences, labels, learning_rate, epochs):
         for epoch in range(epochs):
@@ -130,10 +147,10 @@ class HMM:
             objective = Lc - Lf
 
             # Compute gradients
-            gradients, emission_gradients = self.compute_gradients(sequences, labels)
+            transition_gradients, emission_gradients = self.compute_gradients(sequences, labels)
 
             # Update parameters
-            self.update_parameters(gradients, emission_gradients, learning_rate)
+            self.update_parameters(transition_gradients, emission_gradients, learning_rate)
 
             print(f"Epoch {epoch+1}, Objective: {objective}")
 
@@ -190,16 +207,16 @@ sequences = [
 
 # reason for many labels: one part of the protein might form an alpha helix, but another may form a beta-sheet.
 labels = [
-    [0, 1, 0, 1, 0],  # Labels for sequence 1
-    [1, 2, 0, 1, 2],  # Labels for sequence 2
+    [0, 1, 0],  # Labels for sequence 1
+    [1, 2, 0],  # Labels for sequence 2
 ]
 
 # Create and train the HMM
-num_states = 10  # Number of states (alpha, beta, coil)
+num_states = 3  # Number of states (alpha, beta, coil)
 num_symbols = 20  # Number of symbols (amino acids)
 hmm = HMM(num_states, num_symbols)
-# hmm.train(sequences, labels)
-hmm.CHMM_train(sequences, labels, 0.001, 10)
+hmm.train(sequences, labels)
+# hmm.CHMM_train(sequences, labels, 0.001, 10)
 
 # Test with a new sequence
 test_sequence = [0, 1, 2, 3, 4]  # An unlabeled sequence

@@ -1,0 +1,4 @@
+Sequences used for training data: 
+
+Sequence 1: Cyclin-dependent kinase 2, Homo sapiens: https://www.uniprot.org/uniprotkb/P24941/entry#sequences
+Sequence 2: CDK2 isoform 1: 

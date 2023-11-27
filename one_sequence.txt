@@ -1,0 +1,36 @@
+MENFQKVEKIGEGTYGVVYKARNKLTGEVVALKKIRLDTETEGVPSTAIREISLLKELNHPNIVKLLDVIHTENKLYLVFEFLHQDLKKFMDASALTGIPLPLIKSYLFQLLQGLAFCHSHRVLHRDLKPQNLLINTEGAIKLADFGLARAFGVPVRTYTHEVVTLWYRAPEILLGCKYYSTAVDIWSLGCIFAEMVTRRALFPGDSEIDQLFRIFRTLGTPDEVVWPGVTSMPDYKPSFPKWARQDFSKVVPPLDEDGRSLLSQMLHYDPNKRISAKAALAHPFFQDVTKPVPHLRL
+	Beta strand   3-12	Combined Sources	
+	Beta strand		14-23	Combined Sources	
+	Turn		24-26	Combined Sources	
+	Beta strand		29-34	Combined Sources	
+	Beta strand		39-41	Combined Sources	
+	Beta strand		42-44	Combined Sources	
+	Helix		46-54	Combined Sources	
+	Helix		55-57	Combined Sources	
+	Beta strand		66-72	Combined Sources	
+	Beta strand		75-81	Combined Sources	
+	Beta strand		84-86	Combined Sources	
+	Helix		87-93	Combined Sources	
+	Turn		94-97	Combined Sources	
+	Helix		101-120	Combined Sources	
+	Helix		130-132	Combined Sources	
+	Beta strand		133-135	Combined Sources	
+	Beta strand		137-139	Combined Sources	
+	Beta strand		141-143	Combined Sources	
+	Helix		148-152	Combined Sources	
+	Turn		153-156	Combined Sources	
+	Beta strand		159-161	Combined Sources	
+	Helix		166-168	Combined Sources	
+	Helix		171-174	Combined Sources	
+	Beta strand		178-180	Combined Sources	
+	Helix		183-198	Combined Sources	
+	Helix		208-219	Combined Sources	
+	Turn		224-226	Combined Sources	
+	Helix		230-232	Combined Sources	
+	Helix		248-251	Combined Sources	
+	Beta strand		252-254	Combined Sources	
+	Helix		257-266	Combined Sources	
+	Helix		271-273	Combined Sources	
+	Helix		277-281	Combined Sources	
+	Helix		284-286	Combined Sources	
+	Turn		287-289 Combined Sources

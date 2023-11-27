@@ -1,0 +1,24 @@
+The 20 amino acids:
+
+1. **Alanine (A)**
+2. **Arginine (R)**
+3. **Asparagine (N)**
+4. **Aspartic acid (D)**
+5. **Cysteine (C)**
+6. **Glutamine (Q)**
+7. **Glutamic acid (E)**
+8. **Glycine (G)**
+9. **Histidine (H)**
+10. **Isoleucine (I)**
+11. **Leucine (L)**
+12. **Lysine (K)**
+13. **Methionine (M)**
+14. **Phenylalanine (F)**
+15. **Proline (P)**
+16. **Serine (S)**
+17. **Threonine (T)**
+18. **Tryptophan (W)**
+19. **Tyrosine (Y)**
+20. **Valine (V)**
+
+The letters that are not included: B, J, O, U, X, Z
