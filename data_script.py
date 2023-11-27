@@ -34,5 +34,5 @@ def process_protein_data(input_file, output_file):
         file.write(label_sequence_str + '\n')
 
 input_file = 'one_sequence.txt'
-output_file = 'data.txt'
+output_file = 'training_data.txt'
 process_protein_data(input_file, output_file)

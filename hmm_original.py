@@ -265,7 +265,9 @@ def process_new_sequence(filename):
     return test_sequence
 
 test_sequence = process_new_sequence('test_sequence.txt')
-# Test with a new sequence, unlabeled
 predicted_label, best_path_prob = hmm.predict(test_sequence[0])
+
+
+
 print("Predicted Label:", predicted_label)
 print("Best Path Probability:", best_path_prob) #how confident the model is
