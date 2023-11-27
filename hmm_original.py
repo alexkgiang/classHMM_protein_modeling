@@ -25,7 +25,7 @@ class HMM:
         # Recursion
         for t in range(1, len(sequence)):
             for j in range(self.num_states):
-                alpha[j, t] = np.sum(alpha[:, t - 1] * self.transition_prob[:, j]) * self.emission_prob[j, sequence[t]]
+                alpha[j, t] = np.sum(alpha[:, t - 1] * self.transition_prob[:, j]) * self.emission_prob[j, sequence[t] - 1]
 
         # Termination: sum of the last column
         return np.sum(alpha[:, -1])
