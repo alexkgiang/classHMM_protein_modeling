@@ -242,7 +242,7 @@ def process_file(filename):
 
     return sequences, labels
 
-sequences, labels = process_file('training_data.txt')
+sequences, labels = process_file('HUMAN_training_data.txt')
 
 num_states = 4 # Number of states (alpha, beta, coil)
 num_symbols = 20  # Number of symbols (amino acids)

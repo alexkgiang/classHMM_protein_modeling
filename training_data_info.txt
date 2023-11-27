@@ -1,5 +1,7 @@
 Sequences used for training data: 
 
+HUMAN:
+
 Sequence 1: Cyclin-dependent kinase 2, Homo sapiens: https://www.uniprot.org/uniprotkb/P24941/entry#sequences
 Sequence 2: Elongation of very long chain fatty acids protein 7, Homo sapiens: https://www.uniprot.org/uniprotkb/A1L3X0/entry
 Sequence 3: tRNA wybutosine-synthesizing protein 5, Homo sapiens: https://www.uniprot.org/uniprotkb/A2RUC4/entry#sequences
@@ -12,8 +14,23 @@ Sequence 9: Pyruvate dehydrogenase protein X component, mitochondrial: https://w
 Sequence 10: Forkhead box protein N3: https://www.uniprot.org/uniprotkb/O00409/entry
 Sequence 11: Histone deacetylase complex subunit SAP18: https://www.uniprot.org/uniprotkb/O00422/entry
 Sequence 12: Butyrophilin subfamily 3 member A3: https://www.uniprot.org/uniprotkb/O00478/entry
+Sequence 13: Serine/threonine-protein kinase 25: https://www.uniprot.org/uniprotkb/O00506/entry
+Sequence 14: Syntenin-1: https://www.uniprot.org/uniprotkb/O00560/entry
+Sequence 15: HLA class I histocompatibility antigen, A alpha chain: https://www.uniprot.org/uniprotkb/P04439/entry
+Sequence 16: Neutrophil elastase: https://www.uniprot.org/uniprotkb/P08246/entry
+Sequence 17: Membrane cofactor protein: https://www.uniprot.org/uniprotkb/P15529/entry
+Sequence 18: Coxsackievirus and adenovirus receptor: https://www.uniprot.org/uniprotkb/P78310/entry
+Sequence 19: HLA class II histocompatibility antigen, DRB1 beta chain: https://www.uniprot.org/uniprotkb/P01911/entry
+Sequence 20: Stimulator of interferon genes protein: https://www.uniprot.org/uniprotkb/Q86WV6/entry
+
+
+RAT:
+
+Sequence 1: https://www.uniprot.org/uniprotkb/B1H267/entry
 
 
 
 Unused:
 Sequence: Rho GTPase-activating protein 10, Homo sapiens: https://www.uniprot.org/uniprotkb/A1A4S6/entry#structure
+
+
