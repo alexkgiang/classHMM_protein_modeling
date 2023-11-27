@@ -5,6 +5,11 @@ Sequence 2: Elongation of very long chain fatty acids protein 7, Homo sapiens: h
 Sequence 3: tRNA wybutosine-synthesizing protein 5, Homo sapiens: https://www.uniprot.org/uniprotkb/A2RUC4/entry#sequences
 Sequence 4: Probable crossover junction endonuclease EME2: https://www.uniprot.org/uniprotkb/A4GXA9/entry
 Sequence 5: Synaptosomal-associated protein 23: https://www.uniprot.org/uniprotkb/O00161/entry
+Sequence 6: Phospholemman: https://www.uniprot.org/uniprotkb/O00168/entry
+Sequence 7: Galectin-8: https://www.uniprot.org/uniprotkb/O00214/entry
+Sequence 8: Tumor necrosis factor receptor superfamily member 11B: https://www.uniprot.org/uniprotkb/O00300/entry
+Sequence 9: Pyruvate dehydrogenase protein X component, mitochondrial: https://www.uniprot.org/uniprotkb/O00330/entry
+Sequence 10: Forkhead box protein N3: https://www.uniprot.org/uniprotkb/O00409/entry
 
 
 
