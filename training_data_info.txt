@@ -1,6 +1,6 @@
 Sequences used for training data: 
 
-HUMAN:
+HUMAN (homo sapien):
 
 Sequence 1: Cyclin-dependent kinase 2, Homo sapiens: https://www.uniprot.org/uniprotkb/P24941/entry#sequences
 Sequence 2: Elongation of very long chain fatty acids protein 7, Homo sapiens: https://www.uniprot.org/uniprotkb/A1L3X0/entry
@@ -24,9 +24,29 @@ Sequence 19: HLA class II histocompatibility antigen, DRB1 beta chain: https://w
 Sequence 20: Stimulator of interferon genes protein: https://www.uniprot.org/uniprotkb/Q86WV6/entry
 
 
-RAT:
+RAT (Rattus norvegicus):
 
-Sequence 1: https://www.uniprot.org/uniprotkb/B1H267/entry
+Sequence 1: Heterogeneous nuclear ribonucleoprotein L: https://www.uniprot.org/uniprotkb/F1LQ48/entry
+Sequence 2: Sorting nexin-5: https://www.uniprot.org/uniprotkb/B1H267/entry
+Sequence 3: Endophilin-A2: https://www.uniprot.org/uniprotkb/O35964/entry
+Sequence 4: Phosphatidylinositol 3,4,5-trisphosphate 3-phosphatase and dual-specificity protein phosphatase PTEN: https://www.uniprot.org/uniprotkb/O54857/entry
+Sequence 5: Epsin-1: https://www.uniprot.org/uniprotkb/O88339/entry
+Sequence 6: E3 ubiquitin-protein ligase RNF4: https://www.uniprot.org/uniprotkb/O88846/entry
+Sequence 7: Glutathione S-transferase alpha-1: https://www.uniprot.org/uniprotkb/P00502/entry
+Sequence 8: Ribonuclease pancreatic beta-type: https://www.uniprot.org/uniprotkb/P00684/entry
+Sequence 9: Fatty acid-binding protein, intestinal: https://www.uniprot.org/uniprotkb/P02693/entry
+Sequence 10: Cytochrome b5 type B: https://www.uniprot.org/uniprotkb/P04166/entry
+Sequence 11: Protein S100-B: https://www.uniprot.org/uniprotkb/P04631/entry
+Sequence 12: L-lactate dehydrogenase A chain: https://www.uniprot.org/uniprotkb/P04642/entry
+Sequence 13: Glutathione S-transferase Mu 1: https://www.uniprot.org/uniprotkb/P04905/entry
+Sequence 14: CCAAT/enhancer-binding protein alpha: https://www.uniprot.org/uniprotkb/P05554/entry
+Sequence 15: NAD(P)H dehydrogenase [quinone] 1: https://www.uniprot.org/uniprotkb/P05982/entry
+Sequence 16: Arginase-1: https://www.uniprot.org/uniprotkb/P07824/entry
+Sequence 17: Glutathione S-transferase Mu 2: https://www.uniprot.org/uniprotkb/P08010/entry
+Sequence 18: Microsomal glutathione S-transferase 1: https://www.uniprot.org/uniprotkb/P08011/entry
+Sequence 19: Galectin-3: https://www.uniprot.org/uniprotkb/P08699/entry
+Sequence 20: L-serine dehydratase/L-threonine deaminase: https://www.uniprot.org/uniprotkb/P09367/entry
+
 
 
 

@@ -242,7 +242,7 @@ def process_file(filename):
 
     return sequences, labels
 
-sequences, labels = process_file('HUMAN_training_data.txt')
+sequences, labels = process_file('RAT_training_data.txt')
 
 num_states = 4 # Number of states (alpha, beta, coil)
 num_symbols = 20  # Number of symbols (amino acids)
@@ -264,7 +264,7 @@ def process_new_sequence(filename):
 
     return test_sequence
 
-test_sequence = process_new_sequence('test_sequence.txt')
+test_sequence = process_new_sequence('RAT_test_sequence.txt')
 predicted_label, best_path_prob = hmm.predict(test_sequence[0])
 
 
